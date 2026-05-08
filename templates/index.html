@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Risk AI Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .card { border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-4">
+                    <h2 class="text-center mb-4 text-primary">Credit Risk AI Assessment</h2>
+                    <p class="text-center text-muted">Powered by Random Forest Model (93% Accuracy)</p>
+                    <hr>
+                    
+                    <form action="/predict" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Age</label>
+                                <input type="number" name="person_age" class="form-control" required placeholder="e.g. 25">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Annual Income ($)</label>
+                                <input type="number" name="person_income" class="form-control" required placeholder="e.g. 50000">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Employment Length (Years)</label>
+                                <input type="number" name="person_emp_length" class="form-control" required placeholder="e.g. 5">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Loan Amount ($)</label>
+                                <input type="number" name="loan_amnt" class="form-control" required placeholder="e.g. 15000">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Interest Rate (%)</label>
+                                <input type="number" step="0.01" name="loan_int_rate" class="form-control" required placeholder="e.g. 11.5">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Loan % of Income (0 to 1)</label>
+                                <input type="number" step="0.01" name="loan_percent_income" class="form-control" required placeholder="e.g. 0.25">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Home Ownership</label>
+                                <select name="person_home_ownership" class="form-select">
+                                    <option value="RENT">RENT</option>
+                                    <option value="MORTGAGE">MORTGAGE</option>
+                                    <option value="OWN">OWN</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Loan Intent</label>
+                                <select name="loan_intent" class="form-select">
+                                    <option value="PERSONAL">PERSONAL</option>
+                                    <option value="EDUCATION">EDUCATION</option>
+                                    <option value="MEDICAL">MEDICAL</option>
+                                    <option value="VENTURE">VENTURE</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Analyze Credit Risk</button>
+                    </form>
+
+                    {% if prediction_text %}
+                    <div class="alert alert-{{alert_class}} mt-4 text-center">
+                        <h4>{{ prediction_text }}</h4>
+                        <p>{{ prob_text }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
