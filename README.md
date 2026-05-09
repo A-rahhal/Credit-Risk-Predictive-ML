@@ -56,7 +56,7 @@ Understanding the relationship between different financial variables.
 ##  Installation & Setup
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/A-rahhal/Credit-Risk-AI.git](https://github.com/A-rahhal/Credit-Risk-AI.git)
+   git clone [https://github.com/A-rahhal/Credit-Risk-Predictive-ML.git](https://github.com/A-rahhal/Credit-Risk-Predictive-ML.git)
 
 
 2. **Navigate to the project directory:**
