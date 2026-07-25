@@ -69,14 +69,16 @@ Understanding the relationship between different financial variables.
    ```bash
    cd Credit-Risk-Predictive-ML
 
-## Install dependencies:
 
-Bash
-pip install -r requirements.txt
-Run the Application:
+ 3. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
 
-Bash
-python app.py
+
+ 4. **Run the Application**
+    ```bash
+    python app.py
+
 Access the App: Open your browser and go to http://127.0.0.1:5000
 
 ## 📂 Project Structure
