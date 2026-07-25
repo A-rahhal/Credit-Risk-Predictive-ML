@@ -37,18 +37,24 @@ After rigorous testing and evaluation, the results were as follows:
 
 ### 1. Web Interface Demo
 This is the interactive dashboard where users can input financial data to get an instant credit risk assessment.
+
 ![Web Interface Screenshot](images/web_app_demo_1.png)
 ![Web Interface Screenshot](images/web_app_demo_2.png)
+
 *Figure 1: Flask Web Application - Real-time Risk Prediction*
 
 ### 2. Feature Importance Analysis
 Using the Random Forest model, we identified the top 10 factors that influence loan default.
+
 ![Feature Importance Plot](images/feature_importance.png)
+
 *Figure 2: Top factors influencing credit risk based on the model's insights*
 
 ### 3. Data Correlation Heatmap
 Understanding the relationship between different financial variables.
+
 ![Correlation Heatmap](images/heatmap.png)
+
 *Figure 3: Heatmap of numerical features during the EDA phase*
 
 
@@ -62,7 +68,8 @@ Understanding the relationship between different financial variables.
 2. **Navigate to the project directory:**
    ```bash
    cd Credit-Risk-Predictive-ML
-Install dependencies:
+
+## Install dependencies:
 
 Bash
 pip install -r requirements.txt
@@ -72,7 +79,9 @@ Bash
 python app.py
 Access the App: Open your browser and go to http://127.0.0.1:5000
 
-📂 Project Structure
+## 📂 Project Structure
+
+```
 Plaintext
 ├── app.py                  # Flask Backend Application
 ├── credit_risk_model.pkl   # Pre-trained Random Forest Model
@@ -80,14 +89,17 @@ Plaintext
 ├── dataset/                # Dataset source (CSV)
 ├── templates/              # HTML frontend (index.html)
 └── Credit_Risk_ML.ipynb    # Jupyter Notebook with full EDA & Training
-💡 Key Insights from the Model
+```
+---
+
+## 💡 Key Insights from the Model
 Interest Rate: The most significant predictor of default; higher rates correlate strongly with high-risk profiles.
 
 Income & Debt Ratio: Applicants with lower annual income and high loan-to-income ratios are flagged as higher risk.
 
 Employment History: Stability in employment is a key defensive factor against credit default.
 
-🎓 Certification Context
+## 🎓 Certification Context
 This project serves as a practical validation of the machine learning skills acquired through the IBM Machine Learning Professional Certificate. It demonstrates a complete end-to-end pipeline from raw data to a functional web-based AI tool.
 
 🔗 **Verified Certificate:**
