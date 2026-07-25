@@ -90,6 +90,14 @@ Employment History: Stability in employment is a key defensive factor against cr
 🎓 Certification Context
 This project serves as a practical validation of the machine learning skills acquired through the IBM Machine Learning Professional Certificate. It demonstrates a complete end-to-end pipeline from raw data to a functional web-based AI tool.
 
+<p align="center">
+  <img src="images/ibm-logo.png" width="160" alt="IBM Logo">
+</p>
+
+🔗 **Verified Certificate:**
+
+[![IBM Machine Learning Professional Certificate](images/certificate.png)](https://coursera.org/share/641d92a95dd1eabc1da0adce23ecc5da)
+
 👤 Author
 Anas Rahhal
 
